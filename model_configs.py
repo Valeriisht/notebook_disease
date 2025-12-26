@@ -25,13 +25,16 @@ MODEL_CONFIGS = {
             "enable_categorical": True,
             "verbose": False, 
             "objective":'multi:softprob',
+            "nthread": 8,  
+            "tree_method": "hist",
+            "device": "cuda"
 
         },
         "needs_cat_features": False,
         "use_onehot": True,
         "use_eval_set": True,
         "needs_imputation": False,
-        "shap" : True, 
+        "shap" : False, 
     },
 
     "LightGBM": {
